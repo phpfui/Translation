@@ -1,0 +1,30 @@
+{
+    "name": "phpfui/translation",
+    "description": "Minimal and Fast PHP Object Oriented Translation System",
+    "minimum-stability": "stable",
+    "keywords": ["translate", "translation", "locale", "language", "languages"],
+    "homepage": "http://www.phpfui.com",
+    "license": "MIT",
+    "authors": [
+        {
+        "name": "Bruce Wells",
+        "email": "brucekwells@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4 <8.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=9.0",
+        "phpfui/phpunit-syntax-coverage": "^1.0",
+        "roave/security-advisories": "dev-latest",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {"PHPFUI\\": "src/PHPFUI/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Fixtures\\": "Tests/Fixtures/"}
+    }
+}
