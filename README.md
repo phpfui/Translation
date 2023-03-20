@@ -86,7 +86,7 @@ The **count** variable (:count in the translated text) is used for determining t
  * Combine with **count** parameter - "No records found|One record found|:count records found"
 
 ## Full Class Documentation
-[PHPFUI/InstaDoc](http://phpfui.com/?n=PHPFUI/Translation)
+[PHPFUI/InstaDoc](http://phpfui.com/?n=PHPFUI%5CTranslation&c=Translator)
 
 ## License
 PHPFUI/Translation is distributed under the MIT License.
