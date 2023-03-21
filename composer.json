@@ -22,7 +22,7 @@
         "phpstan/phpstan": "^1.8"
     },
     "autoload": {
-        "psr-4": {"PHPFUI\\": "src/PHPFUI/"}
+        "psr-4": {"PHPFUI\\Translation\\": "src/PHPFUI/Translation/"}
     },
     "autoload-dev": {
         "psr-4": {"Fixtures\\": "Tests/Fixtures/"}
