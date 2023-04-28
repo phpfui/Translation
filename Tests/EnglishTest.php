@@ -28,6 +28,14 @@ class EnglishTest extends Base
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
 		}
 
+	public function testFallbackTranslation() : void
+		{
+		Translator::setLocale('eng');
+		$translated = Translator::trans('.product.brand.line');
+		$this->assertNotEmpty($this->missing->getMissing(), 'Missing translations not reported');
+		$this->assertEquals('.product.brand.line', $translated);
+		}
+
 	/**
 	 * @dataProvider simpleTranslationProvider
 	 */
@@ -37,13 +45,5 @@ class EnglishTest extends Base
 		$translated = Translator::trans($spanishText);
 		$this->assertEquals($spanishText, $translated);
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
-		}
-
-	public function testFallbackTranslation() : void
-		{
-		Translator::setLocale('eng');
-		$translated = Translator::trans('.product.brand.line');
-		$this->assertNotEmpty($this->missing->getMissing(), 'Missing translations not reported');
-		$this->assertEquals('.product.brand.line', $translated);
 		}
 	}
