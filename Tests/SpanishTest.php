@@ -3,12 +3,12 @@
 namespace Tests;
 
 use PHPFUI\Translation\Translator;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
 
 class SpanishTest extends Base
 	{
-	/**
-	 * @dataProvider simpleTranslationProvider
-	 */
+	#[DataProvider('simpleTranslationProvider')]
 	public function testSameLocale(string $sourceText, string $englishText, string $spanishText) : void
 		{
 		Translator::setLocale('spa');
@@ -17,9 +17,7 @@ class SpanishTest extends Base
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
 		}
 
-	/**
-	 * @dataProvider dotTranslationProvider
-	 */
+	#[DataProvider('dotTranslationProvider')]
 	public function testSpanishDotLocale(string $sourceText, string $englishText, string $spanishText) : void
 		{
 		Translator::setLocale('spa');

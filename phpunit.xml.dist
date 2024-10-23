@@ -4,6 +4,7 @@
 	colors="true"
 	processIsolation="false"
 	stopOnFailure="true"
+	displayDetailsOnTestsThatTriggerDeprecations="true"
 	bootstrap="./Tests/bootstrap.php"
 	xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.0/phpunit.xsd">
   <testsuites>

@@ -3,6 +3,9 @@
 namespace Tests;
 
 use PHPFUI\Translation\Translator;
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\TestCase;
+
 
 class BasicTest extends Base
 	{
@@ -25,9 +28,7 @@ class BasicTest extends Base
 		$this->assertNotContains('..', $languages);
 		}
 
-	/**
-	 * @dataProvider simpleTranslationProvider
-	 */
+	#[DataProvider('simpleTranslationProvider')]
 	public function testInvisibleLocale(string $sourceText, string $englishText, string $spanishText) : void
 		{
 		Translator::setLocale('invisible');
@@ -53,9 +54,7 @@ class BasicTest extends Base
 		$this->assertCount(2, $this->missing->getMissing());
 		}
 
-	/**
-	 * @dataProvider pluralTranslationProvider
-	 */
+	#[DataProvider('pluralTranslationProvider')]
 	public function testPluralsNoLocale(string $sourceText, string $pluralizedText, int $count) : void
 		{
 		Translator::setBaseLocale('');
@@ -66,9 +65,7 @@ class BasicTest extends Base
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
 		}
 
-	/**
-	 * @dataProvider pluralTranslationProvider
-	 */
+	#[DataProvider('pluralTranslationProvider')]
 	public function testPluralsSameLocale(string $sourceText, string $pluralizedText, int $count) : void
 		{
 		Translator::setBaseLocale('spa');
@@ -79,9 +76,7 @@ class BasicTest extends Base
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
 		}
 
-	/**
-	 * @dataProvider simpleTranslationProvider
-	 */
+	#[DataProvider('simpleTranslationProvider')]
 	public function testRawLocale(string $sourceText, string $englishText, string $spanishText) : void
 		{
 		Translator::setLocale('RAW');
@@ -91,9 +86,7 @@ class BasicTest extends Base
 		$this->assertEmpty($this->missing->getMissing(), 'Missing translations found');
 		}
 
-	/**
-	 * @dataProvider simpleTranslationProvider
-	 */
+	#[DataProvider('simpleTranslationProvider')]
 	public function testTransLocale(string $sourceText, string $englishText, string $spanishText) : void
 		{
 		Translator::setLocale('TRANS');

@@ -31,7 +31,6 @@ class Base extends \PHPUnit\Framework\TestCase
 
 	/**
 	 * @return string[][]
-	 *
 	 */
 	public static function dotTranslationProvider() : array
 		{
@@ -99,7 +98,6 @@ class Base extends \PHPUnit\Framework\TestCase
 
 	/**
 	 * @return string[][]
-	 *
 	 */
 	public static function simpleTranslationProvider() : array
 		{
