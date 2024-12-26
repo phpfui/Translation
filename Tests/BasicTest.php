@@ -20,7 +20,6 @@ class BasicTest extends Base
 	public function testCountInstalledLanguages() : void
 		{
 		$languages = Translator::getInstalledLanguages();
-		$this->assertIsArray($languages, 'Translator::getInstalledLanguages did not return array');
 		$this->assertGreaterThanOrEqual(2, \count($languages), 'Less than two test languages found');
 		$this->assertContains('eng', $languages);
 		$this->assertContains('spa', $languages);

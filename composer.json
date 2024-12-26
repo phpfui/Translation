@@ -18,8 +18,8 @@
         "phpunit/phpunit": "<12.0",
         "phpfui/phpunit-syntax-coverage": "dev-master",
         "roave/security-advisories": "dev-latest",
-        "friendsofphp/php-cs-fixer": "^3.0",
-        "phpstan/phpstan": "^1.8"
+        "friendsofphp/php-cs-fixer": "*",
+        "phpstan/phpstan": "*"
     },
     "autoload": {
         "psr-4": {"PHPFUI\\Translation\\": "src/PHPFUI/Translation/"}
