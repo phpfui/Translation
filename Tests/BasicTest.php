@@ -4,8 +4,6 @@ namespace Tests;
 
 use PHPFUI\Translation\Translator;
 use PHPUnit\Framework\Attributes\DataProvider;
-use PHPUnit\Framework\TestCase;
-
 
 class BasicTest extends Base
 	{
